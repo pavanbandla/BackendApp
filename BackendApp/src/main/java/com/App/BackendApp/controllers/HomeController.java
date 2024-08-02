@@ -17,7 +17,7 @@ public class HomeController {
     @Autowired
     private UserDetailsService userDetailsService;
 
-    @PostMapping("/insert")
+    @PostMapping("users")
     public ResponseEntity<User> setUser(@RequestBody User user){
         User savedUser = userDetailsService.saveUser(user);
         return ResponseEntity.ok(savedUser);
